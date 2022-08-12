@@ -1,4 +1,3 @@
-
 <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(img/newpix/banner.jpg)">
   <div class="container">
     <div class="row">
@@ -26,18 +25,18 @@
               <div class="col-md-12">
                 <div class="owl-carousel" id="owl1">
 
-                <div class="item">
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/honor.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
                         <h3>Testimonies of the right Elementary Education Foundation</h3>
-                        <p> Damola Rotimi-Silva, and Mildred uyigue (ex FPP Nur & Pry Sch pupils),  acheived outstanding results and won lots of prize in Pentaville secondary school 2021/2022 end of session event. Many thanks to FPP for the solid foundation. Not forgetting Mr. Tseye for his legacy</p>
+                        <p> Damola Rotimi-Silva, and Mildred uyigue (ex FPP Nur & Pry Sch pupils), acheived outstanding results and won lots of prize in Pentaville secondary school 2021/2022 end of session event. Many thanks to FPP for the solid foundation. Not forgetting Mr. Tseye for his legacy</p>
                         <span class="probootstrap-date"><i class="icon-calendar"></i>July 2022</span>
 
                       </div>
                     </a>
-                </div>
-                <div class="item">
+                  </div>
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/entrance.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
@@ -47,8 +46,8 @@
 
                       </div>
                     </a>
-                </div>
-                <div class="item">
+                  </div>
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/rene.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
@@ -58,19 +57,19 @@
 
                       </div>
                     </a>
-                </div>
-                <div class="item">
+                  </div>
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/fiyin.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
                         <h3>Testimonies of the right Elementary Education Foundation</h3>
-                        <p> Mofiyinfoluwa Awotayo (ex FPP Nur & Pry Sch pupil), - topped her class in the 2021/2022 academic session at  Samuel Adegbite Secondary School. Many thanks to FPP for the solid foundation. Not forgetting Mr. Tseye for his legacy</p>
+                        <p> Mofiyinfoluwa Awotayo (ex FPP Nur & Pry Sch pupil), - topped her class in the 2021/2022 academic session at Samuel Adegbite Secondary School. Many thanks to FPP for the solid foundation. Not forgetting Mr. Tseye for his legacy</p>
                         <span class="probootstrap-date"><i class="icon-calendar"></i>July 2022</span>
 
                       </div>
                     </a>
-                </div>
-                <div class="item">
+                  </div>
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/appointment.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
@@ -81,7 +80,7 @@
                       </div>
                     </a>
                   </div>
-                <div class="item">
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/dance.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
@@ -91,8 +90,8 @@
 
                       </div>
                     </a>
-                </div>
-                <div class="item">
+                  </div>
+                  <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/coding.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
@@ -102,7 +101,7 @@
 
                       </div>
                     </a>
-                </div>
+                  </div>
                   <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
                       <figure class="probootstrap-media"><img src="img/newpix/award.png" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
@@ -115,7 +114,7 @@
                     </a>
                   </div>
                   <!-- END item -->
-                 
+
                   <!-- END item -->
                   <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
@@ -128,9 +127,9 @@
                       </div>
                     </a>
                   </div>
-            
+
                   <!-- END item -->
-                 
+
                   <!-- END item -->
                 </div>
               </div>

@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FPP Nursery & Primary School, Lagos</title>
-    <meta name="description" content="FPP Nursery & Primary School, Lagos" >
+    <meta name="description" content="FPP Nursery & Primary School, Lagos">
     <meta name="keywords" content="FPP Nursery & Primary School, Lagos, Schools in Lagos, Schools in Egbeda, Fpp schools">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
-    <meta name="google-site-verification" content="NIBpdAlgSsH0uKru1hiqn1dw_l5NxUTeLWv_UVJTRwY" />  
+    <meta name="google-site-verification" content="NIBpdAlgSsH0uKru1hiqn1dw_l5NxUTeLWv_UVJTRwY" />
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                             <li><a href="https://facebook.com/fppschools"><i class="icon-facebook2"></i></a></li>
                             <li><a href="https://www.instagram.com/fpp_schools/"><i class="icon-instagram2"></i></a></li>
                             <li><a href="https://www.youtube.com/channel/UC32mtFcE07_3poVPvOAUkzQ"><i class="icon-youtube"></i></a></li>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html" title="uiCookies:Enlight">FPP Schools</a>
+                    <a class="navbar-brand" href="index.php" title="uiCookies:Enlight">FPP Schools</a>
                 </div>
 
                 <div id="navbar-collapse" class="navbar-collapse collapse">

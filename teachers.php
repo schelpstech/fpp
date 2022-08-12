@@ -42,7 +42,7 @@ include 'header.php';
 
       <div class="col-md-4 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Mrs Atanda Brenda Abehi</h3>
             <p>Class Teacher</p>
@@ -57,7 +57,7 @@ include 'header.php';
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Miss Okorie Gloria</h3>
             <p>Class Teacher</p>
@@ -72,7 +72,7 @@ include 'header.php';
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Mrs Sodipo Wumi</h3>
             <p>Class Teacher</p>
@@ -94,7 +94,7 @@ include 'header.php';
       <div class="clearfix visible-sm-block visible-xs-block"></div>
       <div class="col-md-3 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Mr Awopetu Jerome</h3>
             <p>School Accountant</p>
@@ -109,7 +109,7 @@ include 'header.php';
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Mr Tseye Ogisi</h3>
             <p>Mathematics Consultant</p>
@@ -124,7 +124,7 @@ include 'header.php';
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Mr John Ekanem</h3>
             <p>Creative Arts Instructor</p>
@@ -139,7 +139,7 @@ include 'header.php';
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="probootstrap-teacher text-center probootstrap-animate">
-          
+
           <div class="text">
             <h3>Mr Segun Adetunji </h3>
             <p>Music Instructor</p>
