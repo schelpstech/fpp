@@ -129,7 +129,17 @@
                   </div>
 
                   <!-- END item -->
+                  <div class="item">
+                    <a href="#" class="probootstrap-featured-news-box">
+                      <figure class="probootstrap-media"><img src="img/newpix/science.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
+                      <div class="probootstrap-text">
+                        <h3>Science practicals</h3>
+                        <p>FPP pupils now undertake supervised science experiments both indoor and outdoor. The pictures shows a pupil having a firsthand experience of what the sun looks like using an apparatus</p>
+                        <span class="probootstrap-date"><i class="icon-calendar"></i>December, 2021</span>
 
+                      </div>
+                    </a>
+                  </div>
                   <!-- END item -->
                 </div>
               </div>
