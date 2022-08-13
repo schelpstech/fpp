@@ -55,7 +55,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php" title="uiCookies:Enlight">FPP Schools</a>
+                    <a class="navbar-brand" href="index.php" title="FPP Schools">FPP Schools</a>
                 </div>
 
                 <div id="navbar-collapse" class="navbar-collapse collapse">
