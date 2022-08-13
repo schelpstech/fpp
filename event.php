@@ -49,7 +49,7 @@
                   </div>
                   <div class="item">
                     <a href="#" class="probootstrap-featured-news-box">
-                      <figure class="probootstrap-media"><img src="img/newpix/rene.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
+                      <figure class="probootstrap-media"><img src="img/newpix/renenew.jpg" alt="FPP Nursery & Primary Schools, Lagos" class="img-responsive"></figure>
                       <div class="probootstrap-text">
                         <h3>Testimonies of the right Elementary Education Foundation</h3>
                         <p> Rene Oshodi da Silva passed excellently at the ST Francis Secondary School Idimu common entrance examination in the 2020/2021 academic session. Many thanks to FPP for the solid foundation.</p>
