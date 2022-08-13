@@ -1,4 +1,5 @@
 <?php
+include "session.php";
 include 'header.php';
 ?>
 <section class="probootstrap-section probootstrap-section-colored">
@@ -34,22 +35,32 @@ include 'header.php';
           <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
             <h2>Get In Touch</h2>
             <p>Contact us using the form below.</p>
+            <?php
+            if (isset($_SESSION['msg'])) {
+              printf('<b>%s</b>', $_SESSION['msg']);
+              unset($_SESSION['msg']);
+            }
+            ?>
             <form action="./php/contact.php" method="post" class="probootstrap-form">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" class="form-control" id="fullname" name="fullname">
+                <input type="text" class="form-control" required='yes' id="fullname" name="fullname">
+              </div>
+              <div class="form-group">
+                <label for="email">Phone number</label>
+                <input type="tel" class="form-control"  name="phone">
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email"  name="email">
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" class="form-control" id="subject" name="subject">
+                <input type="text" class="form-control" id="subject" required='yes' name="subject">
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+                <textarea cols="30" rows="10" class="form-control" id="message" required='yes' name="message"></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Send Message">

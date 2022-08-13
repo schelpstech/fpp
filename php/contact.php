@@ -1,4 +1,5 @@
 <?php
+include "../session.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -11,47 +12,42 @@ require 'PHPMailer/src/SMTP.php';
 *  CONFIGURATION
 */
 
-  // Send email
-if(isset($_POST["email"])) {
-  if(!isset($_POST["email"]))
-  {
-      $output = json_encode(array('type'=>'error', 'text' => 'Input fields are empty!'));
-      die($output);
-  }
-  else {
-      $user_Email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+// Send email
+$valErr = '';
+if (isset($_POST["email"])) {
+  if (!isset($_POST["email"])) {
+    $valErr .= 'Email Address input field is empty!.<br/>';
+  } else {
+    $user_Email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
   }
 }
-if(isset($_POST["message"])) {
-  if(!isset($_POST["message"]))
-  {
-      $output = json_encode(array('type'=>'error', 'text' => 'Input fields are empty!'));
-      die($output);
-  }
-  else {
-      $user_Message = htmlspecialchars($_POST["message"]);
-      
+if (isset($_POST["message"])) {
+  if (!isset($_POST["message"])) {
+    $valErr .= 'Message input field is empty!.<br/>';
+  } else {
+    $user_Message = htmlspecialchars($_POST["message"]);
   }
 }
-if(isset($_POST["subject"])) {
-  if(!isset($_POST["subject"]))
-  {
-      $output = json_encode(array('type'=>'error', 'text' => 'Input fields are empty!'));
-      die($output);
-  }
-  else {
-      $feedback = htmlspecialchars($_POST["subject"]);
-      
+if (isset($_POST["subject"])) {
+  if (!isset($_POST["subject"])) {
+    $valErr .= 'Subject input field is empty!.<br/>';
+  } else {
+    $feedback = htmlspecialchars($_POST["subject"]);
   }
 }
-if(isset($_POST["fullname"])) {
-  if(!isset($_POST["fullname"]))
-  {
-      $output = json_encode(array('type'=>'error', 'text' => 'Input fields are empty!'));
-      die($output);
+if (isset($_POST["fullname"])) {
+  if (!isset($_POST["fullname"])) {
+    $valErr .= 'Fullname input field is empty!.<br/>';
+  } else {
+    $user_Name =  htmlspecialchars($_POST["fullname"]);
   }
-  else {
-      $user_Name =  htmlspecialchars($_POST["fullname"]);
+}
+
+if (isset($_POST["phone"])) {
+  if (!isset($_POST["phone"])) {
+    $valErr .= 'Phone number input field is empty!.<br/>';
+  } else {
+    $phone =  htmlspecialchars($_POST["phone"]);
   }
 }
 
@@ -74,8 +70,10 @@ $smtpAutoTLS = false; // Enable Auto TLS
 $smtpPort = 465; // TCP port to connect to
 
 // Success and error alerts
-$okMessage = 'We have received your message. Stay tuned, we’ll get back to you ASAP!';
-$errorMessage = 'There was an error while submitting the form. Please try again later';
+$okMessage = '<h3 style="color: green;"> We have received your message. Stay tuned, we’ll get back to you ASAP!</h3>';
+$failMessage = '<h3 style="color: red;"> Your message could not be sent. Please try again!</h3>';
+$errorMessage = '<h3 style="color: red;"> ' . $valErr . '</h3>';
+
 
 
 /*
@@ -83,9 +81,9 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
 */
 
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(E_ALL & ~E_NOTICE);
-try {
-  if(count($_POST) == 0) throw new \Exception('Form is empty');
+
+if ($valErr == '') {
+
   $emailTextHtml =  '
   <p>Hi there,</p>
                         <p>Someone just sent an enquiry</p>
@@ -98,6 +96,7 @@ try {
                                         <tr>
                                             <th>Date</th>
                                             <th>Fullname</th>
+                                            <th>Phone number</th>
                                             <th>Email Address</th>
                                             <th>Feedback Type</th>
                                             <th>Message</th>
@@ -106,11 +105,12 @@ try {
                                     </thead>  
                                 <tbody>
                                     <tr>
-                                      <td> '.date("d-m-Y").'</td>
-                                      <td> '.$user_Name.'</td>
-                                      <td> '.$fromEmail.'</td>
-                                      <td>'.$feedback.'</td>
-                                      <td>'.$user_Message.'</td>
+                                      <td> ' . date("d-m-Y") . '</td>
+                                      <td> ' . $user_Name . '</td>
+                                      <td> ' . $phone . '</td>
+                                      <td> ' . $fromEmail . '</td>
+                                      <td>' . $feedback . '</td>
+                                      <td>' . $user_Message . '</td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -119,7 +119,7 @@ try {
                           </tbody>
                         </table>
   ';
-  
+
   $mail = new PHPMailer;
   $mail->setFrom($fromEmail, $fromName);
   $mail->addAddress($sendToEmail, $sendToName);
@@ -129,17 +129,11 @@ try {
   $mail->Subject = $subject;
   $mail->Body    = $emailTextHtml;
   $mail->msgHTML($emailTextHtml);
-  if($smtpUse == true) {
+  if ($smtpUse == true) {
     // Tell PHPMailer to use SMTP
     $mail->isSMTP();
-    // Enable SMTP debugging
-    // 0 = off (for production use)
-    // 1 = client messages
-    // 2 = client and server messages
-    $mail->Debugoutput = function ($str, $level) use (&$mailerErrors) {
-      $mailerErrors[] = [ 'str' => $str, 'level' => $level ];
-    };
-    $mail->SMTPDebug = 3;
+
+    $mail->SMTPDebug = 0;
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = $smtpSecure;
     $mail->SMTPAutoTLS = $smtpAutoTLS;
@@ -148,21 +142,14 @@ try {
     $mail->Username = $smtpUsername;
     $mail->Password = $smtpPassword;
   }
-  if(!$mail->send()) {
-    throw new \Exception('I could not send the email.' . $mail->ErrorInfo);
+  if ($mail->send()) {
+    $_SESSION['msg'] = $okMessage;
+    header("Location: ../contact.php");
+  } else {
+    $_SESSION['msg'] = $failMessage;
+    header("Location: ../contact.php");
   }
-  $responseArray = array('type' => 'success', 'message' => $okMessage);
-}
-catch (\Exception $e) {
-  $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
-}
-// if requested by AJAX request return JSON response
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-  $encoded = json_encode($responseArray); 
-  header('Content-Type: application/json');
-  echo $encoded;
-}
-// else just display the message
-else {
-  echo $responseArray['message'];
+} else {
+  $_SESSION['msg'] = $errorMessage;
+  header("Location: ../contact.php");
 }
