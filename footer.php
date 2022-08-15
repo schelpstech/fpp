@@ -8,7 +8,7 @@
                     <h3>Social</h3>
                     <ul class="probootstrap-footer-social">
                         <li><a href=""><i class="icon-twitter"></i></a></li>
-                        <li><a href="https://facebook.com/fppschools"><i class="icon-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/francis.pen"><i class="icon-facebook"></i></a></li>
                         <li><a href="https://www.instagram.com/fpp_schools/"><i class="icon-instagram"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UC32mtFcE07_3poVPvOAUkzQ"><i class="icon-youtube"></i></a></li>
                     </ul>
